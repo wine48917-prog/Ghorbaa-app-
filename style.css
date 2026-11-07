@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Cairo', sans-serif;
+  color: #f6f0df;
+  background: #080b12;
+  --bg: #080b12;
+  --panel: #101722;
+  --panel2: #151e2b;
+  --gold: #d9b66f;
+  --gold-light: #f5d99a;
+  --muted: #a6a6a6;
+  --border: rgba(217,182,111,.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at top, #192235 0%, transparent 55%),
+    var(--bg);
+}
+
+button, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app-shell {
+  width: 100%;
+  max-width: 600px;
+  min-height: 100vh;
+  margin: auto;
+  padding-bottom: 110px;
+  position: relative;
+}
+
+.topbar {
+  height: 75px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  background: rgba(8,11,18,.9);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--gold-light);
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.brand small {
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #d5c49f;
+}
+
+.icon-btn {
+  border: 0;
+  background: transparent;
+  color: var(--gold);
+  padding: 9px;
+}
+
+.main-content {
+  padding: 20px 17px;
+}
+
+.welcome {
+  min-height: 155px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background:
+    linear-gradient(90deg, rgba(8,11,18,.2), #0b1820),
+    radial-gradient(circle at 80% 40%, #30432f, #101722 65%);
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.welcome h1 {
+  font-size: 23px;
+  margin: 9px 0 3px;
+}
+
+.welcome p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+.moon-art {
+  color: var(--gold-light);
+  font-size: 75px;
+  text-shadow: 0 0 35px #d9b66f;
+}
+
+.prayer-card {
+  margin-top: 18px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, #152a2a, #101722 75%);
+  cursor: pointer;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  color: var(--gold);
+  font-size: 13px;
+}
+
+.prayer-card h2 {
+  font-size: 23px;
+  margin: 15px 0 3px;
+}
+
+.prayer-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.gold-button {
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #f0d18d, #b58a42);
+  color: #18120a;
+  padding: 11px 18px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 26px 2px 13px;
+}
+
+.section-title h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.section-title span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.feature-card {
+  min-height: 135px;
+  padding: 17px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #fff;
+  background: linear-gradient(145deg, #151f2b, #0d131e);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.feature-card:active {
+  transform: scale(.97);
+}
+
+.feature-icon {
+  color: var(--gold);
+}
+
+.feature-icon svg {
+  width: 31px;
+  height: 31px;
+}
+
+.feature-card strong {
+  font-size: 14px;
+}
+
+.feature-card small {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.daily-message {
+  margin-top: 18px;
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: #101722;
+}
+
+.daily-message p {
+  font-size: 12px;
+  color: var(--gold-light);
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  height: 72px;
+  padding: 8px 4px;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(10,14,22,.97);
+  border-top: 1px solid var(--border);
+  z-index: 10;
+}
+
+.bottom-nav button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 0;
+  color: #888;
+  background: transparent;
+  font-size: 10px;
+}
+
+.bottom-nav button.active {
+  color: var(--gold-light);
+}
+
+.bottom-nav button.active svg {
+  filter: drop-shadow(0 0 7px #d9b66f);
+}
+
+.copyright {
+  padding: 18px;
+  text-align: center;
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.copyright small {
+  display: block;
+  color: #777;
+  font-size: 10px;
+}
+
+.side-menu {
+  position: absolute;
+  z-index: 20;
+  top: 75px;
+  right: 10px;
+  width: 220px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: #111a27;
+  box-shadow: 0 15px 40px #0009;
+}
+
+.side-menu button {
+  width: 100%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 13px;
+  border: 0;
+  color: white;
+  background: transparent;
+  text-align: right;
+}
+
+.side-menu button svg {
+  color: var(--gold);
+}
+
+.page-section {
+  min-height: 65vh;
+}
+
+.page-title {
+  padding: 10px 0 22px;
+}
+
+.page-title h1 {
+  font-size: 24px;
+  color: var(--gold-light);
+}
+
+.empty-state {
+  margin-top: 20px;
+  padding: 35px 20px;
+  text-align: center;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--panel);
+}
+
+.empty-state svg {
+  color: var(--gold);
+}
+
+.empty-state p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.quran-cover {
+  padding: 35px 15px;
+  text-align: center;
+  color: var(--gold);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(145deg, #1d302c, #101722);
+}
+
+.quran-cover h2 {
+  color: var(--gold-light);
+}
+
+.zikr-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.zikr-selector label {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.zikr-selector select {
+  padding: 13px;
+  color: white;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.tasbih-circle {
+  width: 230px;
+  height: 230px;
+  margin: 35px auto 20px;
+  border-radius: 50%;
+  border: 8px solid #b58a42;
+  outline: 5px solid #382d1c;
+  background: radial-gradient(circle, #1d302c, #080b12 75%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  cursor: pointer;
+  box-shadow: 0 0 35px #d9b66f20;
+}
+
+.count-number {
+  font-size: 55px;
+  font-weight: 800;
+}
+
+.tasbih-click {
+  margin-top: 10px;
+  padding: 5px 22px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: #b58a42;
+  color: #17120b;
+}
+
+.current-zikr {
+  text-align: center;
+  color: var(--gold-light);
+}
+
+.tasbih-hint {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.reset-button {
+  margin: 15px auto;
+  padding: 11px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.adhkar-list {
+  display: grid;
+  gap: 13px;
+}
+
+.dhikr-card, .settings-card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--panel);
+}
+
+.dhikr-card h3 {
+  color: var(--gold-light);
+  font-size: 16px;
+}
+
+.dhikr-card p {
+  line-height: 2.1;
+  font-size: 15px;
+}
+
+.dhikr-card button {
+  margin-top: 8px;
+}
+
+.done-button {
+  padding: 10px 18px;
+  border: 1px solid #47866a;
+  border-radius: 12px;
+  color: #8ce0b2;
+  background: #102c22;
+}
+
+.source-note {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.settings-card p {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+@media (min-width: 700px) {
+  .app-shell {
+    border-left: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+  }
+}
